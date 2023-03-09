@@ -24,7 +24,7 @@ jobs:
       - name: Run PMD
         run: |
           ./pmd-bin-6.40.0/bin/run.sh pmd \
-            -d ./src \
+            -d /'force-app' \
             -R pmd/ruleset.xml \
             -f csv \
             -reportfile pmd/pmd-report.csv
