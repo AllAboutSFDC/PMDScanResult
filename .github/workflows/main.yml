@@ -23,10 +23,10 @@ jobs:
 
       - name: Run PMD
         run: |
-          ./pmd-bin-6.40.0/bin/run.sh pmd \
-            -d /'force-app' \
-            -R pmd/ruleset.xml \
-            -f csv \
+          ./pmd-bin-6.40.0/bin/run.sh pmd
+            -d force-app
+            -R pmd/ruleset.xml
+            -f csv
             -reportfile pmd/pmd-report.csv
 
       - name: Upload PMD artifact
