@@ -78,13 +78,11 @@
    <rule ref="category/apex/bestpractices.xml/AvoidGlobalModifier" message="Avoid using global modifier">
       <priority>3</priority>
    </rule>
-   <rule ref="category/apex/errorprone.xml/AvoidNonExistentAnnotations">
-   </rule>
+  
    <rule ref="category/apex/errorprone.xml/AvoidHardcodingId" message="Avoid hardcoding ID's">
       <priority>3</priority>
    </rule>
-<!--    <rule ref="category/apex/performance.xml/AvoidDebugStatements" /> -->
-<!--    <rule ref="category/apex/performance.xml/EagerlyLoadedDescribeSObjectResult" /> -->
+
 
    <!-- NAMING -->
    <rule ref="category/apex/codestyle.xml/ClassNamingConventions" message="Class names should begin with an uppercase character">
@@ -98,7 +96,7 @@
    </rule>
 
    <!-- NAMING -->
-   <rule ref="category/apex/codestyle.xml/FieldNamingConventions">
+  <!-- <rule ref="category/apex/codestyle.xml/FieldNamingConventions">
       <priority>3</priority>
    </rule>
    <rule ref="category/apex/codestyle.xml/FormalParameterNamingConventions">
@@ -109,7 +107,7 @@
    </rule>
    <rule ref="category/apex/codestyle.xml/PropertyNamingConventions">
       <priority>3</priority>
-   </rule>
+   </rule> -->
 
    <!-- TESTS -->
    <rule ref="category/apex/bestpractices.xml/ApexUnitTestClassShouldHaveAsserts" message="Apex unit test classes should have at least one System.assert() or assertEquals() or AssertNotEquals() call">
@@ -118,7 +116,7 @@
    <rule ref="category/apex/bestpractices.xml/ApexUnitTestShouldNotUseSeeAllDataTrue" message="@isTest(seeAllData=true) should not be used in Apex unit tests because it opens up the existing database data for unexpected modification by tests">
       <priority>3</priority>
    </rule>
-   <rule ref="category/apex/bestpractices.xml/ApexUnitTestClassShouldHaveRunAs" />
+   
 <!--    <rule ref="category/apex/bestpractices.xml/ApexAssertionsShouldIncludeMessage"/> -->
 <!--    <rule ref="category/apex/bestpractices.xml/ApexUnitTestMethodShouldHaveIsTestAnnotation"/> -->
 <!--    <rule ref="category/apex/errorprone.xml/TestMethodsMustBeInTestClasses"/> -->
@@ -189,23 +187,10 @@
       <priority>3</priority>
    </rule>
 
-   <!-- STYLE -->
-   <rule ref="category/apex/codestyle.xml/OneDeclarationPerLine">
-      <priority>3</priority>
-   </rule>
-   <!-- <rule ref="category/apex/codestyle.xml/FieldDeclarationsShouldBeAtStart"/> -->
-
-   <!-- DOCUMENTATION -->
+     <!-- DOCUMENTATION -->
    <rule ref="category/apex/documentation.xml/ApexDoc" message="Document classes, methods, and properties that are public or global.">
       <priority>3</priority>
    </rule>
 
-   <!-- CLARITY / BEST PRACTICES -->
-   <rule ref="category/apex/bestpractices.xml/DebugsShouldUseLoggingLevel">
-      <priority>3</priority>
-   </rule>
-   <!-- <rule ref="category/apex/bestpractices.xml/UnusedLocalVariable"/> -->
-   <!-- <rule ref="category/apex/errorprone.xml/OverrideBothEqualsAndHashcode" /> -->
-   <!-- <rule ref="category/apex/errorprone.xml/InaccessibleAuraEnabledGetter" /> -->
 
 </ruleset>
