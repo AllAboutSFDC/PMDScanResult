@@ -1,4 +1,4 @@
-public with sharing class AccountController {
+public with sharing class AccountController { // added here
     @AuraEnabled(cacheable=true)
     public static List<Account> getAccountList() {
         // FOR PMD CHECK adding below code
