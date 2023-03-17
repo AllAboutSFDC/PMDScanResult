@@ -191,6 +191,14 @@
    <rule ref="category/apex/documentation.xml/ApexDoc" message="Document classes, methods, and properties that are public or global.">
       <priority>3</priority>
    </rule>
-
+         
+   <!-- HTML -->
+   <rule ref="category/html/bestpractices.xml/AvoidInlineStyles" >
+      <priority>3</priority>
+   </rule>
+  <rule ref="category/html/bestpractices.xml/UseAltAttributeForImages">
+      <priority>3</priority>
+   </rule>
+ 
 
 </ruleset>
