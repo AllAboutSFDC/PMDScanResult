@@ -18,7 +18,7 @@ public with sharing class AccountController {
     /**
      * Name: getSingleAccount
      * Description: Getting Account records
-     * Created Date: 06?03/2023
+     * Created Date: 07/03/2023
      */
     @AuraEnabled(cacheable=true)
     public static Account getSingleAccount() {
