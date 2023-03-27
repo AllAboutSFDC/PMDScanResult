@@ -1,0 +1,43 @@
+<template>
+    <div class="slds-scrollable_x">
+    <!-- <lightning-input value={greeting} onchange={handleInputChange} label="Greeting"></lightning-input> -->
+    <c-jest-session-example3-child label="Greetings card"></c-jest-session-example3-child>
+    <lightning-card>
+    <lightning-button label="Click" onclick={handleClick} class="slds-p-around_medium"></lightning-button>
+    <h1 class="slds-text-heading_medium slds-p-around_medium">Hello {greeting}!!</h1>
+    </lightning-card>
+    <lightning-button onclick={ClickEvent} label={displayCaseRecords}></lightning-button>
+   
+  
+    <template if:true={flag}>
+    <lightning-combobox
+    name="Priority"
+    label='Priority Filter'
+    value={value}
+    placeholder='No Filter'
+    options={casePriority}
+    onchange={handleComboboxChange}
+   ></lightning-combobox>
+    
+   
+    <template if:true={filterFlag}>
+        <lightning-datatable
+        data={cases}
+        key-field="id"
+        columns={filterColumns}></lightning-datatable>
+    </template>
+    <template if:false={filterFlag}>
+    <lightning-card>
+    <lightning-datatable
+    key-field="id"
+    data={cases}
+    show-row-number-column
+    columns={columns}
+    onselectedvalue={handleChange}
+    ></lightning-datatable>
+</lightning-card>
+    </template>
+    </template>
+    
+    </div>
+</template>
