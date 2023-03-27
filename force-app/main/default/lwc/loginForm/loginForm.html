@@ -1,0 +1,41 @@
+<template>
+    <lightning-layout multiple-rows horizontal-align="center">
+        <lightning-layout-item
+          size="12"
+          padding="around-small"
+          small-device-size="3"
+          medium-device-size="6"
+          large-device-size="3"
+        >
+          <h1>Name: Asif Jamal</h1>
+          <h1>Login to Salesforce</h1>
+          <lightning-input
+            type="email"
+            name="username"
+            label="Enter Email"
+            onchange={handleEmailChange}
+            placeholder="Enter Email"
+            required
+          ></lightning-input>
+          <lightning-input
+            type="password"
+            name="password"
+            label="Enter Password"
+            onchange={handlepasswordChange}
+            placeholder="Enter Password"
+            required
+          ></lightning-input>
+          <a target="_blank" onclick={handleForgetPassword}> Forget Password?</a>
+          <br />
+          <lightning-button
+            variant="brand"
+            label="Login"
+            title="Login"
+            onclick={handleLogin}
+            class="slds-m-around_large"
+          ></lightning-button>
+          <br />
+          <h3 class="slds-m-around_large">{message}</h3>
+        </lightning-layout-item>
+      </lightning-layout>
+</template>

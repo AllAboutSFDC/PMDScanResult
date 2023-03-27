@@ -1,5 +1,0 @@
-{"controllerValues":{},"defaultValue":{"attributes":null,"label":"Medium","validFor":[],"value":"Medium"},"url":"/services/data/v57.0/ui-api/object-info/Case/picklist-values/012000000000000AAA/Priority","values":[
-    
-    {"0":{"attributes":null,"label":"High","validFor":[],"value":"High"}},
-    {"1":{"attributes":null,"label":"Medium","validFor":[],"value":"Medium"}},
-    {"2":{"attributes":null,"label":"Low","validFor":[],"value":"Low"}}]}
