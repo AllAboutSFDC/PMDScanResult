@@ -1,9 +1,8 @@
 # Unique name for this workflow
 name: 'coverage'
 on:
-    pull_request_target:
-        branches:
-            - main2
+  pull_request:
+    branches: [ main2 ]
 jobs:
     coverage:
         runs-on: ubuntu-latest
