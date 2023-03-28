@@ -4,6 +4,7 @@ export default class LoginForm extends LightningElement {
   email;
   password;
   message;
+  
   handleEmailChange(event) {
     this.email = event.detail.value;
   }
