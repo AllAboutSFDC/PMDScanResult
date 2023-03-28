@@ -16,6 +16,8 @@ export default class LoginForm extends LightningElement {
       this.message = "Please enter email";
       return;
     }
+    
+
     if (!this.password) {
       this.message = "Please enter password";
       return;
