@@ -1,3 +1,7 @@
+/***
+ * Class name: Case controller
+ * Created Date: 02/02/2023
+ */
 public with sharing class CaseController {
     @AuraEnabled(cacheable=true)
     public static List<Case> getCases(){
