@@ -8,6 +8,17 @@ public with sharing class CaseController {
         }
     }
     @AuraEnabled(cacheable=true)
+    public static List<Case> updateCase(){
+        try {
+            for(case cs: [SELECT Id, CaseNumber, Priority, Subject, Status FROM Case]){
+                cs.Subject = 'test';
+                update cs;
+            }
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
+    @AuraEnabled(cacheable=true)
     public static List<Case> getCasesFiltered(String priority){
         try {
             return [SELECT Id, CaseNumber, Priority, Subject, Status FROM Case WHERE Priority=:priority];
