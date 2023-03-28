@@ -2,7 +2,7 @@ public with sharing class CaseController {
     @AuraEnabled(cacheable=true)
     public static List<Case> getCases(){
         try {
-            return [SELECT Id, CaseNumber, Priority, Subject, Status FROM Case];
+            return [SELECT Id, CaseNumber, Priority, Subject, Status FROM Case WITH SECURITY_ENFORCED Limit 10] ;
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
         }
