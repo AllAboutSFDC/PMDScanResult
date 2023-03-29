@@ -5,7 +5,6 @@ module.exports = {
         '\\.(css|scss)$': 'identity-obj-proxy',
         '\\.svg$': '<rootDir>/test/mocks/svg-mock.js'
     },
-    setupFiles: ['./test/test-setup.js'],
     transformIgnorePatterns: [
         '<rootDir>/node_modules/(?!mathletics-portal-communication-service)'
     ]
