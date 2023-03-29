@@ -1,6 +1,6 @@
 {
     "orgName": "LWC Recipes",
-    "edition": "Developer",
+    "edition": "Developer", 
     "hasSampleData": false,
     "features": ["Walkthroughs", "EnableSetPasswordInApi"],
     "settings": {
