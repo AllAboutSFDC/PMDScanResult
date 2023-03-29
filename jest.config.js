@@ -9,4 +9,4 @@ module.exports = {
     transformIgnorePatterns: [
         '<rootDir>/node_modules/(?!mathletics-portal-communication-service)'
     ]
-};
+}; 
