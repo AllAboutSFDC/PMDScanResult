@@ -9,6 +9,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Run Jest
-      uses: stefanoeb/jest-action@1.0.3
+    - uses: actions/checkout@v2
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Jest Tests
+      env:
+            # Set the JEST_FAKE_SHADOW environment variable to enable the
+              # fake shadow root mode in Jest.
+            JEST_FAKE_SHADOW: 1
+      run: npm run test:jest
+    - name: Upload test coverage
+      uses: actions/upload-artifact@v2
+      with:
+          name: coverage
+          path: coverage/
