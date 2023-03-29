@@ -1,5 +1,5 @@
 const { jestConfig } = require('@salesforce/sfdx-lwc-jest/config');
-
+ 
 module.exports = {
     moduleNameMapper: {
         '\\.(css|scss)$': 'identity-obj-proxy',
