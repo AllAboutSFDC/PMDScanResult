@@ -1,11 +1,12 @@
 const { jestConfig } = require('@salesforce/sfdx-lwc-jest/config');
 
 module.exports = {
-    ...jestConfig,
     moduleNameMapper: {
-        '^lightning/platformShowToastEvent$':
-            '/Users/asif_jamal/Downloads/ShowToastEvent.js'
+        '\\.(css|scss)$': 'identity-obj-proxy',
+        '\\.svg$': '<rootDir>/test/mocks/svg-mock.js'
     },
-
-    modulePathIgnorePatterns: ['<rootDir>/.localdevserver']
+    setupFiles: ['./test/test-setup.js'],
+    transformIgnorePatterns: [
+        '<rootDir>/node_modules/(?!mathletics-portal-communication-service)'
+    ]
 };
