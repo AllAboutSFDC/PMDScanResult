@@ -1,0 +1,27 @@
+name: 'coverage'
+on:
+  pull_request:
+    branches: [ main2 ]
+
+jobs:
+  jest-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Install Dependencies
+         run:npm install
+
+      - name: Run Jest Tests
+        env:
+            # Set the JEST_FAKE_SHADOW environment variable to enable the
+              # fake shadow root mode in Jest.
+            JEST_FAKE_SHADOW: 1
+        run: npm run test:jest
+      - name: Upload test coverage
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage/
