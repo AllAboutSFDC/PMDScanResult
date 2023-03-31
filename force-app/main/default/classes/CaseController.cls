@@ -7,6 +7,9 @@ public with sharing class CaseController {
             throw new AuraHandledException(e.getMessage());
         }
     }
+    /**
+     * Methid Name: getCasesFiltered
+     */
     @AuraEnabled(cacheable=true)
     public static List<Case> getCasesFiltered(String priority){
         try {
