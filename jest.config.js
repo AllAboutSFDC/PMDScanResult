@@ -10,6 +10,7 @@ module.exports = {
             '/Users/asif_jamal/Downloads/ShowToastEvent.js'
     
        },
+       testResultsProcessor: "./myTestResultsProcessor.js",
     
     modulePathIgnorePatterns: ['<rootDir>/.localdevserver']
 };
