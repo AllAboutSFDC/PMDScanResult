@@ -36,7 +36,7 @@ describe("c-login-form", () => {
     loginButton.click();
     const h3 = element.shadowRoot.querySelector("h3");
     await flushPromises();
-    expect(h3.textContent).toBe("Logged in as asif_jamal@ps.com");
+    expect(h3.textContent).toBe("Logged in as asif_jamal@ps.in");
   });
 
   it("Check error through without email login", async () => {
