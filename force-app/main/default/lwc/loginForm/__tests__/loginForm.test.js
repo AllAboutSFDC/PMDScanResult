@@ -76,6 +76,6 @@ describe("c-login-form", () => {
     forgetPasswordButton.click();
     const h3 = element.shadowRoot.querySelector("h3");
     await flushPromises();
-    expect(h3.textContent).toBe("Your Password successfully reset");
+    expect(h3.textContent).toBe("Your Password successfully reseter");
   });
 });
