@@ -18,7 +18,7 @@ jobs:
             # Set the JEST_FAKE_SHADOW environment variable to enable the
               # fake shadow root mode in Jest.
             JEST_FAKE_SHADOW: 1
-      run: npm run test -- --json --outputFile=/test-results.json --debug
+      run: npm run test -- --json --outputFile=/test-results.json --skipApiVersionCheck
     - name: Upload test coverage
       uses: actions/upload-artifact@v2
       with:
